@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Client Cheats - Undetected and full-featured cheats for various games!</title>
+    <style>
+        @font-face {
+            font-family: 'Roboto Light';
+            src: url('Roboto-Light.woff2') format('woff2');
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Roboto Regular';
+            src: url('Roboto-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        body {
+            background-color: #090C15;
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto Light', Arial, sans-serif;
+            /* Use Roboto Light as default font */
+            color: white;
+            /* Set text color to white */
+        }
+
+        /* Add CSS animations */
+        .scroll-up-animation {
+            animation: scrollUpAnimation 0.5s forwards;
+        }
+
+        /* Product hover animation */
+        .product {
+            transition: transform 0.3s ease;
+            /* Transition for smooth animation */
+        }
+
+        .product:hover {
+            transform: translateY(-12px);
+            /* Move the product up slightly */
+            background: linear-gradient(to bottom, rgba(10, 45, 99, 0.8), rgba(9, 11, 20, 0.8));
+            /* Apply color hue on hover */
+        }
+
+        .scroll-down-animation {
+            animation: scrollDownAnimation 0.5s forwards;
+        }
+
+        @keyframes scrollUpAnimation {
+            from {
+                transform: translateY(20px);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes scrollDownAnimation {
+            from {
+                transform: translateY(-20px);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes zoomOutAnimation {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.2);
+            }
+        }
+
+        /* Header styles */
+        .header {
+            width: 100%;
+            height: 106px;
+            background-image: url("header-background.jpg");
+            background-size: cover;
+            text-align: center;
+            color: white;
+            padding-top: 20px;
+            font-family: 'Roboto Light', Arial, sans-serif;
+            /* Change font to Roboto Light */
+        }
+
+        .logo {
+            max-width: 100%;
+            /* Ensure the logo doesn't exceed its container's width */
+            max-height: 70px;
+            /* Set maximum height for the logo */
+            width: auto;
+            /* Allow width to adjust automatically */
+            height: auto;
+            /* Allow height to adjust automatically */
+        }
+
+        /* Navbar styles */
+        .navbar {
+            width: 100%;
+            height: 40px;
+            background-color: #090C15;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: -50px;
+            font-weight: bold;
+            /* Add this line to make the font bold */
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            /* Remove default underline */
+            margin: 0 20px;
+            transition: color 0.3s;
+            /* Add transition for smooth color change */
+            position: relative;
+            /* Add position relative to position the underline */
+        }
+
+        .navbar a:hover {
+            color: #2142F9;
+            /* Change color on hover */
+        }
+
+        /* Underline animation */
+        .navbar a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            /* Position the underline below the text */
+            left: 0;
+            width: 100%;
+            height: 2px;
+            /* Set the height of the underline */
+            background-color: #2142F9;
+            /* Set the color of the underline */
+            transition: width 0.3s;
+            /* Add transition for smooth width change */
+            transform: scaleX(0);
+            /* Initially, set the width of the underline to 0 */
+            transform-origin: center;
+            /* Set the transform origin to the center */
+        }
+
+        .navbar a:hover::after {
+            transform: scaleX(1);
+            /* Scale the underline to full width on hover */
+        }
+
+        /* Container styles */
+        .container-fluid {
+            position: relative;
+            /* Ensure the container is positioned relative to hold absolutely positioned elements */
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .overlay-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            font-family: 'Roboto Light', Arial, sans-serif;
+        }
+
+        .overlay-text .title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .overlay-text .description {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .feature-content {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            font-family: 'Roboto Light', Arial, sans-serif;
+        }
+
+        .container-fluid video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Cover the container with the video */
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .feature-content {
+            width: 318px;
+            height: 247.64px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            position: absolute;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            bottom: 20px;
+            left: 20px;
+            padding: 20px;
+            /* Remove border-radius to eliminate rounded edges */
+        }
+
+
+        /* Product styles */
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .product {
+            width: 310px;
+            height: 460.22px;
+            margin: 10px;
+            background-color: #090B14;
+            text-align: center;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .product img {
+            width: 290px;
+            height: auto;
+            object-fit: cover;
+            margin-bottom: 10px;
+            margin-top: -70px;
+        }
+
+        .product h2 {
+            font-weight: bold;
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .product .client-cheats {
+            font-size: 0.75rem;
+            margin-bottom: 5px;
+        }
+
+        .product p {
+            font-size: 0.75rem;
+            margin-bottom: 10px;
+        }
+
+        /* Button font */
+        .product button {
+            width: 140px;
+            height: 40px;
+            font-size: 0.875rem;
+            background-color: #090C15;
+            color: white;
+            border: 1px solid rgb(255, 255, 255);
+            margin-top: 10px;
+            margin-right: 5px;
+            font-family: 'Roboto Light', Arial, sans-serif;
+            /* Change font to Roboto Light */
+            font-weight: 300;
+            /* Ensure font weight is set to light */
+            text-decoration: none;
+            /* Remove underline by default */
+            display: inline-block;
+            /* Ensuring button behaves properly */
+            text-align: center;
+            /* Center text */
+            line-height: 40px;
+            /* Vertically center text */
+            position: relative;
+            /* Relative position to handle hover animation */
+            transition: background-color 0.3s, color 0.3s, text-decoration 0.3s;
+            /* Add smooth transition */
+        }
+
+        /* Hover animation for button */
+        .product button:hover {
+            background-color: #2142F9;
+            /* Change background color on hover */
+            color: white;
+            /* Change text color on hover */
+            text-decoration: underline;
+            /* Underline text on hover */
+        }
+
+        /* Hover animation for product card */
+        .product:hover {
+            transform: translateY(-14px);
+            /* Move the product up slightly */
+        }
+
+        .card-footer {
+            background-color: rgba(255, 255, 255, 0.0);
+            border: 0;
+        }
+
+        .products-title {
+            text-align: center;
+            margin-top: 40px;
+            font-family: 'Roboto Regular', Arial, sans-serif;
+            font-size: 1.5rem;
+        }
+
+        /* Rest of your CSS */
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <img src="https://cdn.discordapp.com/attachments/1194309279507820595/1223391764061098066/Untitled_design_1.png?ex=6619af5e&is=66073a5e&hm=f8c5b6e568a86d856323289725a6e4909db751b0b4486c035f5bce1681637701&"
+            alt="Client Cheats" class="logo">
+    </div>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="#"><i class="fas fa-home"></i> Home</a>
+        <a href="#"><i class="fas fa-cart-arrow-down"></i> Cheats</a>
+        <a href="#"><i class="fas fa-chart-bar"></i> Status</a>
+        <a href="#"><i class="fas fa-info-circle"></i> How-to</a>
+        <a href="#"><i class="fas fa-question-circle"></i> FAQS</a>
+    </div>
+
+    <!-- Container -->
+    <div class="container-fluid">
+        <video autoplay loop muted>
+            <source src="https://www.ducks-services.com/ducksvideo.mp4" type="video/mp4">
+            <!-- Add other video formats if needed -->
+        </video>
+        <!-- Text overlay -->
+        <div class="overlay-text">
+            <h1 class="title" style="font-size: smaller;">CLIENTCHEATS.XYZ</h1>
+            <h2 class="subtitle">UNDETECTED PRIVATE CHEATS</h2>
+            <p class="description">We provide triple A quality and undetected cheats for games like <br>
+                CALL OF DUTY, APEX, DAYZ, ARMA 3, PUBG, Z1BR and many more.</p>
+
+        </div>
+    </div>
+
+    <!-- Products Title -->
+    <h2 class="products-title">Undetected and full-featured cheats for various games!</h2>
+
+    <div class="container">
+        <div class="products">
+            <!-- Product tabs -->
+            <!-- First row -->
+            <div class="product">
+                <div class="product-inner">
+                    <img src="https://images.pushsquare.com/news/2019/05/dayz_explains_its_mechanics_with_four_minutes_of_gameplay_footage/large.jpg"
+                        alt="DAYZ CHEAT">
+                    <h2>DAYZ CHEAT</h2>
+                    <p><strong>Price:</strong> from €4.24</p>
+                    <p><strong>Status:</strong> Undetected</p>
+                    <p><strong>Verification:</strong> Required</p>
+                    <button>PURCHASE</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-inner">
+                    <img src="https://i.ytimg.com/vi/g5DfGFjQB_s/maxresdefault.jpg" alt="ARMA 3 CHEAT">
+                    <h2>ARMA 3 CHEAT</h2>
+                    <p><strong>Price:</strong> from €4.24</p>
+                    <p><strong>Status:</strong> Undetected</p>
+                    <p><strong>Verification:</strong> Required</p>
+                    <button>PURCHASE</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-inner">
+                    <img src="https://external-preview.redd.it/QF8sV4M2plYwAV_V5iwOZqNNASkpURskIGPt8yEmCpQ.jpg?auto=webp&s=d48622a6fc91abd2d77a24fd0c54d5865cd6c030"
+                        alt="SQUAD CHEAT">
+                    <h2>SQUAD CHEAT</h2>
+                    <p><strong>Price:</strong> from €4.21</p>
+                    <p><strong>Status:</strong> Undetected</p>
+                    <p><strong>Verification:</strong> Required</p>
+                    <button>PURCHASE</button>
+                </div>
+            </div>
+            <!-- Second row -->
+            <div class="product">
+                <div class="product-inner">
+                    <img src="https://proofcore.io/wp-content/uploads/2020/04/ezgif-6-28863ca55378-300x169.jpg"
+                        alt="PUBG CHEAT">
+                    <h2>PUBG CHEAT</h2>
+                    <p><strong>Price:</strong> from €4.24</p>
+                    <p><strong>Status:</strong> Undetected</p>
+                    <p><strong>Verification:</strong> Required</p>
+                    <button>PURCHASE</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-inner">
+                    <img src="https://s3.amazonaws.com/gammicks/wp-content/uploads/2019/09/09233028/z1-image-1.jpg"
+                        alt="Z1BR CHEAT">
+                    <h2>Z1BR CHEAT</h2>
+                    <p><strong>Price:</strong> from €4.24</p>
+                    <p><strong>Status:</strong> Undetected</p>
+                    <p><strong>Verification:</strong> Required</p>
+                    <button>PURCHASE</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-inner">
+                    <img src="https://proofcore.io/wp-content/uploads/2021/03/ezgif.com-gif-maker-300x169.jpg"
+                        alt="BLKSQD CHEAT">
+                    <h2>BLKSQD CHEAT</h2>
+                    <p><strong>Price:</strong> from €4.24</p>
+                    <p><strong>Status:</strong> Undetected</p>
+                    <p><strong>Verification:</strong> Required</p>
+                    <button>PURCHASE</button>
+                </div>
+            </div>
+            <!-- Third row -->
+            <div class="product">
+                <div class="product-inner">
+                    <img src="https://proofcore.io/wp-content/uploads/2021/08/NoCopyright-300x169.jpg"
+                        alt="VANGUARD CHEAT">
+                    <h2>VANGUARD CHEAT</h2>
+                    <p><strong>Price:</strong> from €4.21</p>
+                    <p><strong>Status:</strong> Undetected</p>
+                    <p><strong>Verification:</strong> Required</p>
+                    <button>PURCHASE</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-inner">
+                    <img src="https://proofcore.io/wp-content/uploads/2022/03/NoCopyright-New-3-300x169.jpg"
+                        alt="MW2019 CHEAT">
+                    <h2>MW2019 CHEAT</h2>
+                    <p><strong>Price:</strong> from €4.21</p>
+                    <p><strong>Status:</strong> Undetected</p>
+                    <p><strong>Verification:</strong> Required</p>
+                    <button>PURCHASE</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-inner">
+                    <img src="https://proofcore.io/wp-content/uploads/2022/03/NoCopyright-New-2-300x169.jpg"
+                        alt="MW II CHEAT">
+                    <h2>MW II CHEAT</h2>
+                    <p><strong>Price:</strong> from €4.21</p>
+                    <p><strong>Status:</strong> Undetected</p>
+                    <p><strong>Verification:</strong> Required</p>
+                    <button>PURCHASE</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-inner">
+                    <img src="https://proofcore.io/wp-content/uploads/2022/03/NoCopyright-New-1-300x169.jpg"
+                        alt="MW III CHEAT">
+                    <h2>MW III CHEAT</h2>
+                    <p><strong>Price:</strong> from €4.21</p>
+                    <p><strong>Status:</strong> Undetected</p>
+                    <p><strong>Verification:</strong> Required</p>
+                    <button>PURCHASE</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-inner">
+                    <img src="https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/campaigns/escape-from-tarkov/geforce-fwg-escape-from-tarkov-og-image-1200x630.jpg"
+                        alt="EFT CHEAT">
+                    <h2>EFT CHEAT</h2>
+                    <p><strong>Price:</strong> from €4.21</p>
+                    <p><strong>Status:</strong> Undetected</p>
+                    <p><strong>Verification:</strong> Required</p>
+                    <button>PURCHASE</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-inner">
+                    <img src="https://www.ggrecon.com/media/xqklapgq/escape-from-tarkov-arena.jpg?center=0.36882031850546249"
+                        alt="EFT ARENA CHEAT">
+                    <h2>EFT ARENA CHEAT</h2>
+                    <p><strong>Price:</strong> from €4.21</p>
+                    <p><strong>Status:</strong> Undetected</p>
+                    <p><strong>Verification:</strong> Required</p>
+                    <button>PURCHASE</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-inner">
+                    <img src="https://www.geekgeneration.fr/wp-content/uploads/2021/02/Tom-Clancys-Rainbow-Six-Siege.jpg"
+                        alt="R6 CHEAT">
+                    <h2>R6 CHEAT</h2>
+                    <p><strong>Price:</strong> from €4.21</p>
+                    <p><strong>Status:</strong> Undetected</p>
+                    <p><strong>Verification:</strong> Required</p>
+                    <button>PURCHASE</button>
+                </div>
+            </div>
+        <div class="product">
+            <div class="product-inner">
+                <img src="https://games.24tv.ua/resources/photos/news/202306/2335868.jpg?v=1686921046000&w=1200&h=675"
+                    alt="BATTLEBIT CHEAT">
+                <h2>BATTLEBIT CHEAT</h2>
+                <p><strong>Price:</strong> from €4.21</p>
+                <p><strong>Status:</strong> Undetected</p>
+                <p><strong>Verification:</strong> Required</p>
+                <button>PURCHASE</button>
+            </div>
+        </div>
+        <div class="product">
+            <div class="product-inner">
+                <img src="https://th.bing.com/th/id/OIP.vxCU95Pba8AeU_26P7ASHQHaEK?rs=1&pid=ImgDetMain"
+                    alt="RUST CHEAT">
+                <h2>RUST CHEAT</h2>
+                <p><strong>Price:</strong> from €4.21</p>
+                <p><strong>Status:</strong> Undetected</p>
+                <p><strong>Verification:</strong> Required</p>
+                <button>PURCHASE</button>
+            </div>
+        </div>
+</body>
+
+</html>
